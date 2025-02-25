@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { GitlabIcon as GitHub, Linkedin, Mail, ArrowDown } from "lucide-react";
 import { motion } from "framer-motion";
+import Me from '@/assets/me.png'
 
 const CodePattern = () => (
   <svg
@@ -120,7 +121,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400 dark:from-purple-600 dark:to-blue-600 rounded-3xl transform -rotate-6 opacity-50"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src=""
+                  src={Me}
                   alt="Guilherme Faccin"
                   fill
                   className="object-cover"
