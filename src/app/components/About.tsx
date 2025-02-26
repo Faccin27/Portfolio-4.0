@@ -90,10 +90,10 @@ export default function About() {
           </motion.div>
         </div>
       </div>
-      <div className="absolute bottom-0 right-0 w-64 h-64 -mb-36 -mr-12 opacity-20">
+      <div className="absolute bottom-0 right-0 w-64 h-64 -mb-32 -mr-12 opacity-20">
         <Image
           src={Logo}
-          alt="Decorative background"
+          alt="Decorative logo"
           width={256}
           height={256}
         />
