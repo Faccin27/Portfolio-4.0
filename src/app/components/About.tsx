@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Code, Database, Server, Eye } from "lucide-react";
 import Image from "next/image";
-import Logo from '@/assets/logo2.png'
+import Logo from "@/assets/logo2.png";
 
 export default function About() {
   const skills = [
@@ -61,7 +61,7 @@ export default function About() {
             </p>
             <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
               My expertise extends to modern frameworks like Next.js and state
-              management tools like Redux. I'm committed to writing clean,
+              management tools like Redux. I&apos;m committed to writing clean,
               efficient code and staying up-to-date with the latest industry
               trends to deliver cutting-edge solutions for my clients.
             </p>
@@ -91,12 +91,7 @@ export default function About() {
         </div>
       </div>
       <div className="absolute bottom-0 right-0 w-64 h-64 -mb-32 -mr-12 opacity-20">
-        <Image
-          src={Logo}
-          alt="Decorative logo"
-          width={256}
-          height={256}
-        />
+        <Image src={Logo} alt="Decorative logo" width={256} height={256} />
       </div>
     </section>
   );

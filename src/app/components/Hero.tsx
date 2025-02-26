@@ -74,14 +74,16 @@ export default function Hero() {
             </p>
             <div className="flex justify-center lg:justify-start space-x-4 mb-8">
               <a
-                href="#"
+                href="https://github.com/Faccin27"
+                target="_blank"
                 className="p-3 rounded-full bg-white/80 hover:bg-white dark:bg-gray-800/80 dark:hover:bg-gray-800 transition-colors duration-300 shadow-lg hover:shadow-xl"
                 aria-label="GitHub Profile"
               >
                 <GitHub className="w-6 h-6 text-gray-700 dark:text-gray-300" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/guilherme-faccin"
+                target="_blank"
                 className="p-3 rounded-full bg-white/80 hover:bg-white dark:bg-gray-800/80 dark:hover:bg-gray-800 transition-colors duration-300 shadow-lg hover:shadow-xl"
                 aria-label="LinkedIn Profile"
               >
@@ -89,6 +91,7 @@ export default function Hero() {
               </a>
               <a
                 href="mailto:gfaccin27@gmail.com"
+                target="_blank"
                 className="p-3 rounded-full bg-white/80 hover:bg-white dark:bg-gray-800/80 dark:hover:bg-gray-800 transition-colors duration-300 shadow-lg hover:shadow-xl"
                 aria-label="Email Contact"
               >
@@ -116,19 +119,38 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="relative w-72 h-72 md:w-96 md:h-96 mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 dark:from-blue-600 dark:to-purple-600 rounded-3xl transform rotate-6 opacity-50"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400 dark:from-purple-600 dark:to-blue-600 rounded-3xl transform -rotate-6 opacity-50"></div>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <motion.div
+              className="relative w-72 h-72 md:w-96 md:h-96 mx-auto"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 dark:from-blue-600 dark:to-purple-600 rounded-3xl"
+                initial={{ rotate: 6, opacity: 0.5 }}
+                whileHover={{ rotate: 0, opacity: 0.7 }}
+                transition={{ duration: 0.3 }}
+              ></motion.div>
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400 dark:from-purple-600 dark:to-blue-600 rounded-3xl"
+                initial={{ rotate: -6, opacity: 0.5 }}
+                whileHover={{ rotate: 0, opacity: 0.7 }}
+                transition={{ duration: 0.3 }}
+              ></motion.div>
+              <motion.div
+                className="relative rounded-2xl overflow-hidden shadow-2xl w-full h-full"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
                 <Image
-                  src={Me}
+                  src={Me || "/placeholder.svg"}
                   alt="Guilherme Faccin"
-                  fill
-                  className="object-cover"
+                  width={384}
+                  height={384}
+                  className="object-cover w-full h-full"
                   priority
                 />
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </motion.div>
         </div>
       </div>

@@ -32,7 +32,8 @@ export default function Contact() {
     resolver: zodResolver(formSchema),
   })
 
-  const onSubmit = async (data: FormData) => {
+  // const onSubmit = async  (data: FormData) => {
+    const onSubmit = async  () => {
     setIsSubmitting(true)
     try {
       // Preciso fazer o back-end

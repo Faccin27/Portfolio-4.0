@@ -3,8 +3,10 @@
 import { motion } from "framer-motion"
 import { Code, Database, Server, Layout, GitBranch, Terminal, Layers, Cpu, Globe, Workflow } from "lucide-react"
 import AnimatedSectionHeader from "./AnimatedSectionHeader"
+import { LucideIcon } from "lucide-react"
 
-const SkillIcon = ({ icon: Icon, color }: { icon: any; color: string }) => (
+
+const SkillIcon = ({ icon: Icon, color }: { icon: LucideIcon; color: string }) => (
   <div className={`p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg`}>
     <Icon className={`w-6 h-6 ${color}`} />
   </div>
